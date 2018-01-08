@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <% include templates/header.ejs%>
+
+
+
+    <h1><%= title %></h1>
+    <h1><%= points %></h1>
+
+    <p>Welcome to <%= title %></p>
+  <% for(var i=0;i<5;i++){  %>
+    <li>Tuna</li>
+  <%  } %>
+
+
+    <h1><%= videodata.categoryName %></h1>
+
+      <ul style="display: flex;">
+
+        <% videodata.categories.forEach(function (item) {   %>
+          <li style="list-style:none;flex:align-content:stretch;padding: 50px;background: chocolate;color:gold;border: blue solid 1px;"> <a href="https://vsp?cat=<%= item.categoryID %>"><%= item.categoryName %></a></li>
+        <br>
+          <% }); %>
+
+      </ul>
+
+
+
+
+    <h1><%= title %></h1>
+    <h1><%= Name %></h1>
+
+
+  </body>
+</html>
